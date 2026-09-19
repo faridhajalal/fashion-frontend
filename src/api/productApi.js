@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5000/api/products";
+const BASE_URL = "https://fashion-backend-vp5b.onrender.com/api/products";
 
 export async function fetchProducts() {
   const res = await fetch(BASE_URL);
