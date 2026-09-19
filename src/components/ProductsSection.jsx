@@ -14,17 +14,30 @@ export default function ProductsSection() {
       .finally(() => setLoading(false));
   }, []);
 
-  if (loading) return <p style={{ textAlign: "center", padding: "20px" }}>Loading products...</p>;
-  if (error) return <p style={{ textAlign: "center", padding: "20px" }}>Error: {error}</p>;
+  if (loading)
+    return <p style={{ textAlign: "center", padding: "30px" }}>Loading products...</p>;
+  if (error)
+    return <p style={{ textAlign: "center", padding: "30px" }}>Error: {error}</p>;
 
   return (
-    <section style={{ padding: "30px 20px" }}>
-      <h2 style={{ textAlign: "center", marginBottom: "20px" }}>Our Products</h2>
+    <section style={{ padding: "50px 30px", background: "#faf8f4" }}>
+      <h2
+        style={{
+          textAlign: "center",
+          color: "#1f1f1f",
+          marginBottom: "36px",
+          fontSize: "1.8rem",
+        }}
+      >
+        Our Products
+      </h2>
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))",
-          gap: "20px",
+          gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
+          gap: "24px",
+          maxWidth: "1000px",
+          margin: "0 auto",
         }}
       >
         {products.map((p) => (

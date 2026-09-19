@@ -1,26 +1,29 @@
 export default function ProductCard({ product }) {
   return (
-    <div
-      style={{
-        border: "1px solid #ddd",
-        borderRadius: "8px",
-        padding: "12px",
-        width: "220px",
-        flexShrink: 0,
-      }}
-    >
-      <img
-        src={product.image}
-        alt={product.name}
+    <div style={{ textAlign: "center" }}>
+      <div
         style={{
-          width: "100%",
-          height: "220px",
-          objectFit: "cover",
-          borderRadius: "6px",
+          background: "#f5f1ea",
+          borderRadius: "12px",
+          padding: "16px",
+          marginBottom: "10px",
         }}
-      />
-      <h3>{product.name}</h3>
-      <p>${product.price}</p>
+      >
+        <img
+          src={product.image}
+          alt={product.name}
+          style={{
+            width: "100%",
+            height: "130px",
+            objectFit: "cover",
+            borderRadius: "8px",
+          }}
+        />
+      </div>
+      <h3 style={{ fontSize: "0.95rem", color: "#1f1f1f", margin: "4px 0", fontWeight: 600 }}>
+        {product.name}
+      </h3>
+      <p style={{ color: "#8a8a8a", fontSize: "0.9rem" }}>${product.price}</p>
     </div>
   );
 }
